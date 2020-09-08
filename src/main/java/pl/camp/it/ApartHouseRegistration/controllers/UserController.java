@@ -9,11 +9,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.camp.it.ApartHouseRegistration.model.User;
 import pl.camp.it.ApartHouseRegistration.service.IUserService;
+import pl.camp.it.ApartHouseRegistration.session.SessionObject;
+
+import javax.annotation.Resource;
 
 @Controller
 public class UserController {
 @Autowired
     IUserService userService;
+@Resource
+    SessionObject sessionObject;
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String showRegister(Model model){
@@ -33,6 +38,11 @@ public class UserController {
             return "redirect:/register";
         }
 
+    }
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(){
+        this.sessionObject.setUser(null);
+        return  "redirect:/main";
     }
 
 

@@ -11,7 +11,13 @@
 </div>
 
 <div id="user-menu">
-    <a href="/login" id="login-button"></a>
+    <th:block th:if="${!isLogged}">
+        <a href="/login" id="login-button"></a>
+    </th:block>
+    <th:block th:if="${isLogged}">
+        <a href="/logout" id="login-button"></a>
+    </th:block>
+
 </div>
 
 <div id="finder">

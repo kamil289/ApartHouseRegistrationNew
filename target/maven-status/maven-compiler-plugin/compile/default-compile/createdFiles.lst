@@ -8,6 +8,7 @@ pl/camp/it/ApartHouseRegistration/controllers/UserController.class
 pl/camp/it/ApartHouseRegistration/controllers/AuthenticationController.class
 pl/camp/it/ApartHouseRegistration/model/Guest.class
 pl/camp/it/ApartHouseRegistration/controllers/AdminController.class
+pl/camp/it/ApartHouseRegistration/session/SessionObject.class
 pl/camp/it/ApartHouseRegistration/model/Apartments$PetFriendly.class
 pl/camp/it/ApartHouseRegistration/App.class
 pl/camp/it/ApartHouseRegistration/AppConfiguration.class
